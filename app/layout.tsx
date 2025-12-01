@@ -10,7 +10,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SecureLock — Secure File Encryption",
   description: "Encrypt and decrypt any file locally in your browser with no size or format limitations",
-  generator: "v0.app",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
