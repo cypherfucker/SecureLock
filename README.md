@@ -65,7 +65,7 @@ Safari and Mobile browsers are limited to a single file with maximum size of 1GB
 
 ## 🛡️ Security Architecture
 
-Z3R0 implements industry-standard cryptographic practices:
+SecureLock implements industry-standard cryptographic practices:
 
 - **Encryption Algorithm**: AES-256 [Galois/Counter Mode](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
 - **Key Derivation**: [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) with 100,000 iterations
