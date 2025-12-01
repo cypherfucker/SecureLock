@@ -17,7 +17,7 @@ SecureLock provides AES-256-GCM encryption for any file type, ensuring your sens
 **Key Features:**
 - 🔐 **AES-256-GCM Encryption** - Implemented using [Libsodium library](https://github.com/jedisct1/libsodium) for cryptographic algorithms
 - 📁 **Universal File Support** - Encrypt any file type (documents, images, videos, etc.)
-- 🚫 **No Size Limits** - Handle files of any size without restrictions [(¹)](https://github.com/cypherfucker/SecureLock/blob/main/README.md#safari-and-mobile-browsers)
+- 🚫 **No Size Limits** - Handle files of any size without restrictions [ⓘ](https://github.com/cypherfucker/SecureLock/blob/main/README.md#safari-and-mobile-browsers)
 - 🌐 **Local Processing** - Zero server communication, complete privacy
 - 🎯 **Zero Knowledge** - We never see your files or passwords
 - 📱 **Cross-Platform** - Works on any device with a modern browser
