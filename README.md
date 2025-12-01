@@ -15,9 +15,9 @@ SecureLock is a privacy-focused lightweight encryption web-app that allows you t
 SecureLock provides AES-256-GCM encryption for any file type, ensuring your sensitive data remains completely private. Whether you're protecting personal documents, business files, or media content, SecureLock offers enterprise-level security with consumer-friendly simplicity.
 
 **Key Features:**
-- 🔐 **AES-256-GCM Encryption** - Natively implemented using [Libsodium library](https://github.com/jedisct1/libsodium) for cryptographic algorithms
+- 🔐 **AES-256-GCM Encryption** - Implemented using [Libsodium library](https://github.com/jedisct1/libsodium) for cryptographic algorithms
 - 📁 **Universal File Support** - Encrypt any file type (documents, images, videos, etc.)
-- 🚫 **No Size Limits** - Handle files of any size without restrictions  
+- 🚫 **No Size Limits** - Handle files of any size without restrictions [(¹)](https://github.com/cypherfucker/SecureLock/blob/main/README.md#safari-and-mobile-browsers)
 - 🌐 **Local Processing** - Zero server communication, complete privacy
 - 🎯 **Zero Knowledge** - We never see your files or passwords
 - 📱 **Cross-Platform** - Works on any device with a modern browser
@@ -56,10 +56,10 @@ Files encrypted with SecureLock are identifiable by looking at the file signatur
 
 ### Safari and Mobile Browsers
 
-Safari and Mobile browsers are limited to a single file with maximum size of 1GB due to some issues related to service-workers. In addition, this limitation also applies when the app fails to register the service-worker (e.g FireFox Private Browsing).
+Safari and Mobile browsers are limited to a single file with maximum size of 1GB due to some issues related to service-workers. In addition, this limitation also applies when the app fails to register the service-worker (e.g Firefox Private Browsing).
 
 - **Password Recovery**: If you forget your password, your files cannot be recovered. There is no "forgot password" option by design.
-- **Browser Compatibility**: Requires a modern browser with Web Crypto API support (Chrome 37+, Firefox 34+, Safari 7+, Edge 12+)
+- **Browser Compatibility**: Requires a modern browser support (Chrome 37+, Firefox 34+, ~~Safari 7+~~, Edge 12+) **[We strongly advise against using Safari or any WebKit browser](https://github.com/cypherfucker/SecureLock/blob/main/public/safari_libsodium_crypto.pdf)**
 - **Memory Usage**: Very large files may consume significant browser memory during processing
 - **File Associations**: Encrypted files lose their original file associations and must be manually renamed after decryption
 
@@ -68,10 +68,9 @@ Safari and Mobile browsers are limited to a single file with maximum size of 1GB
 SecureLock implements industry-standard cryptographic practices:
 
 - **Encryption Algorithm**: AES-256 [Galois/Counter Mode](https://en.wikipedia.org/wiki/Galois/Counter_Mode)
-- **Key Derivation**: [PBKDF2](https://en.wikipedia.org/wiki/PBKDF2) with 100,000 iterations
-- **Salt Generation**: Cryptographically secure random 16-byte salt per file
-- **IV Generation**: Unique 12-byte initialization vector per encryption
-- **Authentication**: Built-in authentication tag prevents tampering
+- **[XChaCha20-Poly1305](https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305/xchacha20-poly1305_construction)** - for symmetric encryption (never worry about nonce reuse)
+- **[Argon2id](https://github.com/p-h-c/phc-winner-argon2)** - for password-based key derivation: To this day the best password hashing algorithm
+- **[X25519](https://cr.yp.to/ecdh.html)** - for key exchange
 - **Implementation**: The Libsodium library API
 
 
