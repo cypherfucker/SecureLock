@@ -27,7 +27,7 @@ SecureLock provides AES-256-GCM encryption for any file type, ensuring your sens
 
 ### Getting Started
 1. Visit the [SecureLock 🔒](https://securelock.cypherfucker.com) web application
-2. Choose your encryption method: Password or [PGP Key](https://pgp.cypherfucker.com)
+2. Choose your encryption method: [Password](https://github.com/cypherfucker/SecureLock/blob/main/README.md#password-requirements) or [PGP Key](https://pgp.cypherfucker.com)
 3. Drag and drop your file or click to select
 4. Enter a strong password (minimum 16 characters with numbers, uppercase, and special characters)
 5. Click "Encrypt File" to secure your data
@@ -71,7 +71,7 @@ SecureLock implements industry-standard cryptographic practices:
 - **[XChaCha20-Poly1305](https://libsodium.gitbook.io/doc/secret-key_cryptography/aead/chacha20-poly1305/xchacha20-poly1305_construction)** - for symmetric encryption (never worry about nonce reuse)
 - **[Argon2id](https://github.com/p-h-c/phc-winner-argon2)** - for password-based key derivation: To this day the best password hashing algorithm
 - **[X25519](https://cr.yp.to/ecdh.html)** - for key exchange
-- **Implementation**: The Libsodium library API
+- **Implementation**: [Libsodium library](https://github.com/jedisct1/libsodium) API
 
 
 ## Development
