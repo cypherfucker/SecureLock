@@ -52,7 +52,7 @@ For maximum security, passwords must include:
 
 ### File Signature
 
-Files encrypted with hat.sh are identifiable by looking at the file signature that is used by the app to verify the content of a file, Such signatures are also known as magic numbers or Magic Bytes. These Bytes are authenticated and cannot be changed.
+Files encrypted with SecureLock are identifiable by looking at the file signature that is used by the app to verify the content of a file, Such signatures are also known as magic numbers or Magic Bytes. These Bytes are authenticated and cannot be changed.
 
 ### Safari and Mobile Browsers
 
