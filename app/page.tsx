@@ -20,7 +20,7 @@ export default function HomePage() {
             <Image src="/logo.png" alt="SecureLock Logo" width={32} height={32} className="w-8 h-8" />
             <div>
               <h1 className="font-bold text-xl">SecureLock</h1>
-              <p className="text-xs text-muted-foreground">v2.2.5</p>
+              <p className="text-xs text-muted-foreground">v2.3</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
